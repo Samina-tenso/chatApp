@@ -78,7 +78,7 @@ function Chat() {
 
     function deleteRoom() {
         socket.emit("delete_room", room)
-        console.log("horse")
+
     }
 
     return (
