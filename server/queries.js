@@ -41,7 +41,7 @@ function joinRoom(userName, roomName) {
 
 function deleteRoom(room) {
     return new Promise((resolve, reject) => {
-        const sql = `DELETE FROM Messages WHERE RoomName = (?)`;
+        const sql = `DELETE FROM Messages WHERE room = (?)`;
         db.run(sql, [room], (error) => {
             if (error) {
                 console.log(error.message)
