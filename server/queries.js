@@ -24,7 +24,7 @@ function insertMessage(room, message, userName, time) {
 
 function joinRoom(userName, roomName) {
     return new Promise((resolve, reject) => {
-        const sql = `INSERT INTO Rooms ( RoomName, Username)VALUES (?,?);`;
+        const sql = `INSERT INTO rooms ( room, Username)VALUES (?,?);`;
         db.run(sql, [userName, roomName], (error) => {
             if (error) {
                 console.log(error.message)

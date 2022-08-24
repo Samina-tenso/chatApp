@@ -10,10 +10,10 @@ const db = new sqlite3.Database("db.sqlite", (err) => {
     }
 })
 
-const roomTable = `CREATE TABLE IF NOT EXISTS Rooms(
+const roomTable = `CREATE TABLE IF NOT EXISTS rooms(
     Room_ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    RoomName VARCHART(100) NOT NULL,
-    Username VARCHAR(100) NOT NULL
+    room VARCHART(100) NOT NULL,
+    userName VARCHAR(100) NOT NULL
 
 );`;
 
